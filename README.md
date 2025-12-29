@@ -30,7 +30,7 @@ This solution reads a JSON file containing each team's win-loss records versus o
 2. Run the script:
 
 ```
-python EngineeringInternshipPrompt.py
+python solution.py
 ```
 
 3. The head-to-head matrix will be printed in the terminal.
@@ -46,5 +46,4 @@ python EngineeringInternshipPrompt.py
 
 ## Notes
 - The code is self-contained and does not require any external libraries beyond Python's standard library.
-- The matrix displays only the number of wins (W) for each matchup, not the full win-loss record.
 - You can easily adapt the script to read from a different file or output to a CSV if needed.
