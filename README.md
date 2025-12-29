@@ -1,7 +1,7 @@
 # Head-to-Head Records Matrix
 
 
-This solution reads a JSON file containing each team's win-loss records versus opponents and builds a matrix displaying only the number of wins (W) for each matchup. The code is written in Python for clarity and ease of use.
+This solution reads a JSON file containing each team's win-loss records versus opponents and builds both a matrix and a pandas DataFrame displaying only the number of wins (W) for each matchup. The code prints both formats with clear titles for easy comparison. It is written in Python for clarity and ease of use.
 
 ## How It Works
 
@@ -22,7 +22,8 @@ This solution reads a JSON file containing each team's win-loss records versus o
    - Builds a matrix where each cell `[i][j]` shows the number of wins for team `i` vs team `j`.
 
 3. **Output**:
-   - Prints a formatted table to the console, showing only the number of wins (W) for each matchup.
+   - Prints a formatted matrix table to the console, showing only the number of wins (W) for each matchup, with the title "Head-to-Head Wins Matrix:".
+   - Prints a pandas DataFrame of the same data, with the title "Head-to-Head Wins DataFrame:".
 
 ## Usage
 
@@ -33,7 +34,7 @@ This solution reads a JSON file containing each team's win-loss records versus o
 python solution.py
 ```
 
-3. The head-to-head matrix will be printed in the terminal.
+3. Both the head-to-head matrix and the pandas DataFrame will be printed in the terminal, each with a title.
 
 ## Example Output
 
