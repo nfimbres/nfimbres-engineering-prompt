@@ -39,6 +39,7 @@ python solution.py
 
 ```
 Head-to-Head Wins Matrix:
+
        | TeamA | TeamB | TeamC
 -------+-------+-------+-------
 TeamA  | -     | 2     | 1    
