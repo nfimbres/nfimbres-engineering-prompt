@@ -35,15 +35,24 @@ python solution.py
 
 3. The head-to-head matrix will be printed in the terminal.
 
-
 ## Example Output
 
-|       | TeamA | TeamB | TeamC |
-|-------|-------|-------|-------|
-| TeamA |   -   |   2   |   1   |
-| TeamB |   1   |   -   |   3   |
-| TeamC |   2   |   0   |   -   |
+```
+Head-to-Head Wins Matrix:
+       | TeamA | TeamB | TeamC
+-------+-------+-------+-------
+TeamA  | -     | 2     | 1    
+TeamB  | 1     | -     | 3    
+TeamC  | 2     | 0     | -    
+
+Head-to-Head Wins DataFrame:
+
+      TeamA TeamB TeamC
+TeamA     -     2     1
+TeamB     1     -     3
+TeamC     2     0     -
+```
 
 ## Notes
-- The code is self-contained and does not require any external libraries beyond Python's standard library.
+- The code requires the `pandas` library. Install it with `pip install pandas` if not already installed.
 - You can easily adapt the script to read from a different file or output to a CSV if needed.
