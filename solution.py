@@ -2,10 +2,11 @@
 """
 head-to-head records matrix generator
 
-reads a json file (prompt.json) containing each team's win-loss records versus opponents and prints a matrix table.
+reads a json file (e.g., prompt.json) containing each team's win-loss records versus opponents and prints a matrix table.
 """
 import json
 import os
+import pandas as pd  # add pandas import
 
 def load_data(filename):
     # open and read the json file
@@ -35,6 +36,8 @@ def build_matrix(data):
     return teams, matrix
 
 def print_matrix(teams, matrix):
+    # print the matrix title
+    print("Head-to-Head Wins Matrix:\n")
     # print the table header
     header = [''] + teams
     # calculate column widths
@@ -59,8 +62,13 @@ def main():
     data = load_data(filename)
     # build the matrix
     teams, matrix = build_matrix(data)
-    # print the matrix
+    # print the matrix with a title
     print_matrix(teams, matrix)
+    # create and print pandas dataframe with a title
+    matrix_for_df = [[cell if cell == '-' else cell for cell in row] for row in matrix]
+    df = pd.DataFrame(matrix_for_df, index=teams, columns=teams)
+    print("\nHead-to-Head Wins DataFrame:\n")
+    print(df)
 
 if __name__ == '__main__':
     # run the main function
